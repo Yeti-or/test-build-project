@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                font-size: 2rem;
+                color: rebeccapurple;
+                background-color: #c0ffee;
+            }
+
+            header {
+                height: 4rem;
+                padding: 1rem;
+                background-color: turquoise;
+            }
+
+            main {
+                flex-grow: 1;
+                display: flex;
+                gap: 1rem;
+            }
+
+            main aside {
+                width: 9rem;
+                padding: 1rem;
+                border: 2px dashed currentColor;
+            }
+
+            main h2 {
+                margin: 0;
+            }
+
+            footer {
+                height: 4rem;
+                padding: 1rem;
+                background-color: turquoise;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <main>
+            <aside>
+                put some ads here!
+            </aside>
+            <section>
+                <article>
+                    <h2>Article 1</h1>
+                    <p>some text</p>
+                </article>
+                <article>
+                    <h2>Article 2</h1>
+                    <p>some more text</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            Footer
+        </footer>
+        <script src="index.js"></script>
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+    </body>
+</html>

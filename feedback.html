@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                margin: 0;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                font-size: 2rem;
+                color: rebeccapurple;
+                background-color: #c0ffee;
+            }
+
+            header {
+                height: 4rem;
+                padding: 1rem;
+                background-color: turquoise;
+            }
+
+            main {
+                flex-grow: 1;
+                padding: 1rem;
+                border: 2px dashed currentColor;
+            }
+
+            main form {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            main textarea {
+                padding: 1rem;
+                box-sizing: border-box;
+                width: 100%;
+                flex-grow: 1;
+            }
+
+            main button {
+                height: 2rem;
+                align-self: flex-start;
+            }
+
+            footer {
+                height: 4rem;
+                padding: 1rem;
+                background-color: turquoise;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            Header
+        </header>
+        <main>
+            <form action="" method="POST">
+                <textarea id="feedback"></textarea>
+                <button>Sumbit your feedback</button>
+            </form>
+        </main>
+        <footer>
+            Footer
+        </footer>
+        <script src="feedback.js"></script>
+        <script src="header.js"></script>
+        <script src="footer.js"></script>
+    </body>
+</html>
