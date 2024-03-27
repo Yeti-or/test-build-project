@@ -2,26 +2,9 @@
 <html>
     <head>
         <style>
-            html {
-                height: 100%;
-            }
-            body {
-                margin: 0;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-
-                font-size: 2rem;
-                color: rebeccapurple;
-                background-color: #c0ffee;
-            }
-
-            header {
-                height: 4rem;
-                padding: 1rem;
-                background-color: turquoise;
-            }
+            @import url('global.css');
+            @import url('src/components/Header/header.css');
+            @import url('src/components/Footer/footer.css');
 
             main {
                 flex-grow: 1;
@@ -48,12 +31,6 @@
                 align-self: flex-start;
             }
 
-            footer {
-                height: 4rem;
-                padding: 1rem;
-                background-color: turquoise;
-            }
-
         </style>
     </head>
     <body>
@@ -70,7 +47,7 @@
             Footer
         </footer>
         <script src="feedback.js"></script>
-        <script src="header.js"></script>
-        <script src="footer.js"></script>
+        <script src="./src/components/Header/header.js"></script>
+        <script src="./src/components/Footer/footer.js"></script>
     </body>
 </html>
