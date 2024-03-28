@@ -7,7 +7,7 @@ const PAGES = './src/pages';
 module.exports = {
     entry: () => {
         return [].concat(fs.readdirSync(PAGES)).reduce((acc, el) => {
-            const entryName = el === 'index.js' ? 'main ' : el.split('.')[0];
+            const entryName = el === 'index.js' ? 'main' : el.split('.')[0];
             const entryPath = rp(path.join(PAGES, el));
 
             return {
@@ -15,5 +15,13 @@ module.exports = {
                 ...acc
             };
         }, {});
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+            },
+        ],
     }
 };
