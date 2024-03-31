@@ -9,7 +9,7 @@
     "build": "NODE_ENV=production npx webpack build",
     "update-version": "./updateVersion.js",
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js":"eslint .",
+    "lint:js": "eslint .",
     "lint:js:fix": "npm run lint -- --fix",
     "lint:css": "stylelint '**/*.css'",
     "lint:css:fix": "npm run lint:css -- --fix"
@@ -17,6 +17,8 @@
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.2.1",
+    "@commitlint/config-conventional": "^19.1.0",
     "css-loader": "^6.10.0",
     "css-minimizer-webpack-plugin": "^6.0.0",
     "eslint": "^8.57.0",
