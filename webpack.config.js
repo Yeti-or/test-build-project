@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const isProd = process.env.NODE_ENV === "production";
 console.log('isProd', isProd);
 
+const VERSION = '1.0.1';
+
 module.exports = {
     entry: {
         index: './src/pages/index.js',
@@ -38,7 +40,7 @@ module.exports = {
         new DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
             'UPS': process.env.NODE_ENV,
-            'VERSION': 42,
+            'VERSION': JSON.stringify(VERSION),
         }),
         new HtmlWebpackPlugin({
             filename: "index.html",
