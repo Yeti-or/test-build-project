@@ -3,7 +3,7 @@
 main {
     flex-grow: 1;
     padding: 1rem;
-    border: 2px dashed currentColor;
+    border: 2px dashed currentcolor;
 }
 
 main form {

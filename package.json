@@ -8,8 +8,11 @@
     "prebuild": "npm run update-version",
     "build": "NODE_ENV=production npx webpack build",
     "update-version": "./updateVersion.js",
-    "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js":"eslint .",
+    "lint:js:fix": "npm run lint -- --fix",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:css:fix": "npm run lint:css -- --fix"
   },
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
@@ -22,6 +25,8 @@
     "html-webpack-plugin": "^5.6.0",
     "required-path": "^1.0.1",
     "style-loader": "^3.3.4",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard": "^36.0.0",
     "webpack": "^5.91.0",
     "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4",
