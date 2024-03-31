@@ -1,27 +1,24 @@
-const fs = require('fs');
-const path = require('path');
-const rp = require('required-path');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const isProd = process.env.NODE_ENV === "production";
 
-const PAGES = './src/pages';
+console.log('isProd', isProd);
 
 module.exports = {
-    entry: () => {
-        return [].concat(fs.readdirSync(PAGES)).reduce((acc, el) => {
-            const entryName = el === 'index.js' ? 'main' : el.split('.')[0];
-            const entryPath = rp(path.join(PAGES, el));
-
-            return {
-                [entryName]: entryPath,
-                ...acc
-            };
-        }, {});
+    cache: false,
+    entry: {
+        index: './src/pages/index.js',
+        feedback: './src/pages/feedback.js',
     },
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
+                use: [
+                    isProd ? MiniCssExtractPlugin.loader : 'style-loader',
+                    'css-loader'
+                ],
             },
         ],
-    }
+    },
+    plugins: [].concat(isProd ? [new MiniCssExtractPlugin()] : [])
 };

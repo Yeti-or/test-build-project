@@ -1,0 +1,17 @@
+@import url('../global.css');
+
+main {
+    flex-grow: 1;
+    display: flex;
+    gap: 1rem;
+}
+
+main aside {
+    width: 9rem;
+    padding: 1rem;
+    border: 2px dashed currentColor;
+}
+
+main h2 {
+    margin: 0;
+}

@@ -1,3 +1,3 @@
 import './header.css';
 
-console.log('hello header');
+export const print = () => console.log('hello header');

@@ -1,3 +1,3 @@
 import './footer.css';
 
-console.log('hello footer');
+export const print = () => console.log('hello footer');
