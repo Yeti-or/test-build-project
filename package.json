@@ -12,7 +12,8 @@
     "lint:js": "eslint .",
     "lint:js:fix": "npm run lint -- --fix",
     "lint:css": "stylelint '**/*.css'",
-    "lint:css:fix": "npm run lint:css -- --fix"
+    "lint:css:fix": "npm run lint:css -- --fix",
+    "prepare": "husky"
   },
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
@@ -25,6 +26,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
     "html-webpack-plugin": "^5.6.0",
+    "husky": "^9.0.11",
     "required-path": "^1.0.1",
     "style-loader": "^3.3.4",
     "stylelint": "^16.3.1",
