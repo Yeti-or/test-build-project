@@ -1,10 +1,11 @@
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const isProd = process.env.NODE_ENV === "production";
+const { DefinePlugin } = require("webpack");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
+const isProd = process.env.NODE_ENV === "production";
 console.log('isProd', isProd);
 
 module.exports = {
-    cache: false,
     entry: {
         index: './src/pages/index.js',
         feedback: './src/pages/feedback.js',
@@ -20,5 +21,16 @@ module.exports = {
             },
         ],
     },
-    plugins: [].concat(isProd ? [new MiniCssExtractPlugin()] : [])
+    optimization: {
+        minimizer: [
+            new CssMinimizerPlugin(),
+        ]
+    },
+    plugins: [
+        new DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+            'UPS': process.env.NODE_ENV,
+            'VERSION': 42,
+        })
+    ].concat(isProd ? [new MiniCssExtractPlugin()] : [])
 };
