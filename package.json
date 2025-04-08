@@ -1,28 +1,14 @@
 {
   "name": "test-build-project",
   "version": "1.0.1",
-  "description": "test project to learn webpack",
+  "description": "test project to learn build tools",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=development npx webpack serve",
-    "prebuild": "npm run update-version",
-    "build": "NODE_ENV=production npx webpack build",
-    "update-version": "./updateVersion.js"
+    "dev": "vite",
+    "build": "vite build"
   },
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
   "devDependencies": {
-    "css-loader": "^6.10.0",
-    "css-minimizer-webpack-plugin": "^6.0.0",
-    "html-webpack-plugin": "^5.6.0",
-    "required-path": "^1.0.1",
-    "style-loader": "^3.3.4",
-    "webpack": "^5.91.0",
-    "webpack-bundle-analyzer": "^4.10.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
-  },
-  "dependencies": {
-    "mini-css-extract-plugin": "^2.8.1"
+    "vite": "^6.2.5"
   }
 }
