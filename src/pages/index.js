@@ -13,6 +13,7 @@ printFooter();
 if (process.env.NODE_ENV === 'development') {
     console.log('Hello dear dev')
 }
-console.log(VERSION);
+console.log(import.meta.env)
+console.log(import.meta.env.VITE_VERSION);
 console.log(process.env.NODE_ENV);
 // console.log(UPS);
