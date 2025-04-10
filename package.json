@@ -8,7 +8,9 @@
   },
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
-    "vite": "^6.2.5"
+    "vite": "^6.2.5",
+    "vite-plugin-inspect": "^11.0.0"
   }
 }
