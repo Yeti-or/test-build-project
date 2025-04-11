@@ -1,9 +1,9 @@
 // css of feedback page
-require('./feedback.css');
+import './feedback.css';
 
 // components of feedback page
-const { print: printHeader } = require('../components/Header/header.js');
-const { print: printFooter } = require('../components/Footer/footer.js');
+import { print as printHeader } from '../components/Header/header.js';
+import { print as printFooter } from '../components/Footer/footer.js';
 
 // logic of feedback page
 console.log('hello feedback.js')

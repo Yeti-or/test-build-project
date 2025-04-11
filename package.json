@@ -4,7 +4,8 @@
   "description": "test project to learn build tools",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "author": "Vasiliy Loginevskiy",
   "license": "ISC",
